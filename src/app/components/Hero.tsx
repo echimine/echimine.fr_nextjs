@@ -2,14 +2,14 @@ import { ChevronDown } from 'lucide-react';
 import { Typographie } from './Typographie';
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden ">
       {/* VIDEO EN FOND */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-[calc(100vh-140px)] object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
         id="video"
       >
         <source
