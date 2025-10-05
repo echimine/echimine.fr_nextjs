@@ -23,7 +23,8 @@ export default function Home() {
 
   if (loading) return <p>Chargement...</p>;
   if (error) return <p>Erreur : {error}</p>;
-  if (!data || data.data.length === 0) return <p>Aucune catégorie trouvée.</p>;
+  if (!data || data.data.length === 0)
+    return <p>{'Aucune catégorie trouvée.'}</p>;
   console.log(data);
   return (
     <>
@@ -42,7 +43,7 @@ export default function Home() {
               height={200}
             />
           ) : (
-            <p>Pas d'image pour cette catégorie</p>
+            <p>{`pas d'image`}</p>
           )}
 
           <ul>
@@ -50,7 +51,13 @@ export default function Home() {
               <li key={article.id}>
                 {article.name} ({article.nbrLikes} likes)
                 {article.pathImg && (
-                  <img src={`${API_URL}${article.pathImg}`} alt="" />
+                  <Image
+                    src={`${API_URL}${article.pathImg}`}
+                    alt=""
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                  />
                 )}
               </li>
             ))}

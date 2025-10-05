@@ -1,7 +1,5 @@
 import Hero from './components/Hero';
 import DataEchimine from './components/DataEchimineù/DataEchimine';
-import { MotionTypographie } from './components/MotionTypographie';
-import { Typographie } from './components/Typographie';
 import AboutMe from './components/AboutMe/AboutMe';
 
 export default function App() {

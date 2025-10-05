@@ -135,12 +135,12 @@ export const Typographie = forwardRef<HTMLElement, Props>(
       const isInternal = href.startsWith('/');
 
       return isInternal ? (
-        <Link href={href} ref={ref as any} className={classes} {...rest}>
+        <Link href={href} ref={ref as null} className={classes} {...rest}>
           {children}
         </Link>
       ) : (
         <a
-          ref={ref as any}
+          ref={ref as null}
           href={href}
           className={classes}
           target="_blank"
@@ -153,7 +153,7 @@ export const Typographie = forwardRef<HTMLElement, Props>(
     }
 
     return (
-      <Component ref={ref as any} className={classes} {...rest}>
+      <Component ref={ref as null} className={classes} {...rest}>
         {children}
       </Component>
     );
