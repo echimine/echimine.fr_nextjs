@@ -6,7 +6,7 @@ import AboutMe from './components/AboutMe/AboutMe';
 
 export default function App() {
   return (
-    <main>
+    <main className="bg-jaune">
       <Hero />
       <AboutMe />
       <DataEchimine />

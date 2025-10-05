@@ -12,10 +12,8 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full object-cover"
         id="video"
       >
-        <source
-          src="/video/Edit_Aestetique_Thrawn_Empire_Fini_Q_E.mp4"
-          type="video/mp4"
-        />
+        <source src="/video/hero.webm" type="video/webm" />
+        <source src="/video/hero.mp4" type="video/mp4" />
       </video>
 
       {/* MASQUE SVG */}
