@@ -29,7 +29,7 @@ export default function RootLayout({
         />
         <meta name="apple-mobile-web-app-title" content="Echimine" />
       </head>
-      <body className="bg-jaune antialiased">
+      <body className="bg-white antialiased">
         <Header />
         {children}
         <Footer />

@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="h-screen flex justify-end flex-col">
+    <footer className="h-screen flex justify-end flex-col bg-jaune">
       <img src="/images/logo/footer-echimine.svg" alt="" className="w-full" />
     </footer>
   );

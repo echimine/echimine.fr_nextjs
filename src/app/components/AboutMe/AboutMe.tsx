@@ -1,14 +1,17 @@
 import { Typographie } from '../Typographie';
 const AboutMe = () => {
   return (
-    <section className="px-10 py-16 max-w-6xl mx-auto">
+    <section className="px-10 py-16 max-w-6xl mx-auto ">
       <div className="flex flex-col md:flex-row items-center gap-12">
         <div className="md:w-2/3 flex flex-col gap-4">
           <div className="pb-8">
             <Typographie variant="h2" component="h2" fontChoice="font-archivo">
-              ABOUT ME
+              La Commaunuté
             </Typographie>
           </div>
+          <Typographie variant="h2" component="h3">
+            Création d'un serveur Discord
+          </Typographie>
           <Typographie>
             Moi c’est Eliott. J’ai commencé à faire des vidéos sur TikTok en
             2022. Pendant plus d’un an et demi, je montais tout sur CapCut, puis
@@ -31,8 +34,8 @@ const AboutMe = () => {
         {/* IMAGE */}
         <div className="md:w-1/3">
           <img
-            src="/images/pfp-echimine.png"
-            alt="Photo de Eliott"
+            src="/images/logo/universeeditfr.png"
+            alt="logo de UniverseEDitFR"
             className="w-full rounded-2xl object-cover"
           />
         </div>

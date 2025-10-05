@@ -6,11 +6,14 @@ import AboutMe from './components/AboutMe/AboutMe';
 
 export default function App() {
   return (
-    <main className="bg-jaune">
+    <main className="">
       <Hero />
-      <AboutMe />
+      <section className="bg-jaune rounded-2xl">
+        <AboutMe />
+      </section>
+
       <DataEchimine />
-      <div className="md:pt-20">
+      {/*       <div className="md:pt-20">
         <MotionTypographie
           variant="h1"
           weight="bold"
@@ -40,7 +43,7 @@ export default function App() {
             className="w-[72px] pr-2"
           />
         </div>
-      </section>
+      </section> */}
       {/* <GridNormal /> */}
       {/* <section>
         <Typographie>Serveur Discord UniverseEditFR</Typographie>
