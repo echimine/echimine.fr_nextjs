@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
-import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Header from '@/components/commons/navigations/Header/Header';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#fcd309', // 👉 la couleur de la barre du navigateur
+  themeColor: '#fcd309',
 };
 
 export default function RootLayout({
@@ -30,6 +30,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Echimine" />
       </head>
       <body className="bg-white antialiased">
+        {/* <Header /> */}
         <Header />
         {children}
         <Footer />

@@ -40,8 +40,7 @@ body {
   --font-excon: 'Excon', sans-serif;
   --font-sentient: 'Sentient', serif;
   --color-jaune: #fcd309;
-  --bg-jaune: #fcd309;
-  --bg-noir: #101010;
+  --color-noir: #101010;
 }
 
 @theme inline {
@@ -50,8 +49,13 @@ body {
   --font-sentient: var(--font-sentient);
 
   --color-jaune: var(--color-jaune);
-  --color-noir: var(--noir);
+  --color-noir: var(--color-noir);
+}
 
-  --text-jaune: var(--bg-jaune);
-  --border-jaune: var(--jaune);
+.gradient-bg {
+  background: linear-gradient(
+    151deg,
+    rgba(252, 211, 9, 0.7) 21.06%,
+    #fff 37.98%
+  );
 }

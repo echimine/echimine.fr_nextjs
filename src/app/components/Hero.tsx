@@ -2,9 +2,8 @@ import { ChevronDown } from 'lucide-react';
 import { Typographie } from './Typographie';
 const Hero = () => {
   return (
-    <section className="relative w-full h-[calc(100vh-50px)] overflow-hidden ">
-      {/* VIDEO EN FOND */}
-      <video
+    <section className="relative w-full h-[calc(100vh-50px)] overflow-hidden gradient-bg">
+      {/* <video
         autoPlay
         loop
         muted
@@ -16,7 +15,6 @@ const Hero = () => {
         <source src="/video/hero.mp4" type="video/mp4" />
       </video>
 
-      {/* MASQUE SVG */}
       <svg
         className="absolute inset-0 w-full h-full z-10"
         viewBox="0 0 1920 1080"
@@ -41,7 +39,8 @@ const Hero = () => {
         </defs>
 
         <rect width="100%" height="100%" fill="white" mask="url(#text-mask)" />
-      </svg>
+      </svg> */}
+
       <div className="absolute bottom-30 w-full flex flex-col items-center gap-10 z-20">
         <Typographie
           variant="h4"
@@ -55,7 +54,6 @@ const Hero = () => {
           <ChevronDown />
         </div>
       </div>
-      <div className="bg-jaune rounded-t-2xl w-3 h-3"></div>
     </section>
   );
 };
