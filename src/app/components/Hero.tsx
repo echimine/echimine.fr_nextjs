@@ -1,57 +1,40 @@
 import { ChevronDown } from 'lucide-react';
 import { Typographie } from './Typographie';
+import Image from 'next/image';
+import CtaButton from '@/components/commons/CtaButton/CtaButton';
+
 const Hero = () => {
   return (
-    <section className="relative w-full h-[calc(100vh-50px)] overflow-hidden gradient-bg">
-      {/* <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-        id="video"
-      >
-        <source src="/video/hero.webm" type="video/webm" />
-        <source src="/video/hero.mp4" type="video/mp4" />
-      </video>
+    <section className="w-full h-screen overflow-hidden flex justify-center">
+      <div className="absolute inset-0">
+        <div className="w-full h-full gradient-bg"></div>
+      </div>
 
-      <svg
-        className="absolute inset-0 w-full h-full z-10"
-        viewBox="0 0 1920 1080"
-        preserveAspectRatio="xMidYMid slice"
-      >
-        <defs>
-          <mask id="text-mask">
-            <rect width="100%" height="100%" fill="white" />
-            <text
-              x="50%"
-              y="50%"
-              fontSize="20vw"
-              fill="black"
-              textAnchor="middle"
-              dominantBaseline="middle"
-              fontFamily="Archivo, sans-serif"
-              fontWeight="900"
-            >
-              ECHIMINE
-            </text>
-          </mask>
-        </defs>
-
-        <rect width="100%" height="100%" fill="white" mask="url(#text-mask)" />
-      </svg> */}
-
-      <div className="absolute bottom-30 w-full flex flex-col items-center gap-10 z-20">
+      <div className="relative h-screen max-w-7xl flex flex-col items-center-safe justify-center gap-6 px-4">
         <Typographie
-          variant="h4"
-          component="h2"
-          fontChoice="font-excon"
-          className="font-archivo text-center"
+          component="h1"
+          className="title drop-shadow-2xl opacity-80"
+          weight="black"
         >
-          Editeur de films et séries sur Tiktok depuis 2022
+          ECHIMINE
         </Typographie>
-        <div>
-          <ChevronDown />
+        <div className="flex flex-col gap-4 justify-center items-center">
+          <Typographie
+            variant="h4"
+            component="h2"
+            fontChoice="font-excon"
+            className="font-archivo text-center drop-shadow-lg max-w-2xl"
+          >
+            Editeur de films et séries sur Tiktok depuis 2022
+          </Typographie>
+          <div className="flex flex-col md:flex-row gap-4">
+            <CtaButton href="" bg="bg-jaune">
+              Rejoindre la communauté
+            </CtaButton>
+            <CtaButton href="" bg="border-1">
+              Découvrir
+            </CtaButton>
+          </div>
         </div>
       </div>
     </section>

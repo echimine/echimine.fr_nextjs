@@ -59,3 +59,13 @@ body {
     #fff 37.98%
   );
 }
+
+.title {
+  color: #fff;
+  font-size: clamp(3rem, 15vw, 12.5rem);
+  line-height: 1.05;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  mix-blend-mode: difference;
+}

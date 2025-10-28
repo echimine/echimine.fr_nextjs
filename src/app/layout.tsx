@@ -29,11 +29,12 @@ export default function RootLayout({
         />
         <meta name="apple-mobile-web-app-title" content="Echimine" />
       </head>
-      <body className="bg-white antialiased">
-        {/* <Header /> */}
-        <Header />
-        {children}
-        <Footer />
+      <body className={`max-w-full`}>
+        <div className="flex flex-col overflow-x-clip">
+          <Header />
+          <main className="flex flex-grow flex-col">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
