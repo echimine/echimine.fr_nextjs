@@ -14,8 +14,10 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
     | 'h6'
     | 'link'
     | 'body-base'
-    | 'body-sm'
-    | 'date';
+    | 'body-lg'
+    | 'sous-title'
+    | 'date'
+    | 'total';
   component?:
     | 'h1'
     | 'h2'
@@ -89,8 +91,10 @@ export const Typographie = forwardRef<HTMLElement, Props>(
         variantStyles = 'text-6xl';
         break;
       case 'h2':
-        variantStyles = 'text-3xl';
+        variantStyles = 'text-7xl';
         break;
+      case 'sous-title':
+        variantStyles = 'text-xl';
       case 'h3':
         variantStyles = 'text-2xl';
         break;
@@ -109,11 +113,15 @@ export const Typographie = forwardRef<HTMLElement, Props>(
       case 'body-base':
         variantStyles = 'text-base';
         break;
-      case 'body-sm':
-        variantStyles = 'text-sm';
+      case 'body-lg':
+        variantStyles = 'text-lg';
         break;
       case 'date':
         variantStyles = 'text-date';
+        break;
+
+      case 'total':
+        variantStyles = 'text-5xl';
         break;
     }
 

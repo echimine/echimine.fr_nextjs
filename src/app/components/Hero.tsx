@@ -10,10 +10,10 @@ const Hero = () => {
         <div className="w-full h-full gradient-bg"></div>
       </div>
 
-      <div className="relative h-screen max-w-7xl flex flex-col items-center-safe justify-center gap-6 px-4">
+      <div className="relative h-screen max-w-7xl flex flex-col items-center justify-center gap-6 px-4">
         <Typographie
           component="h1"
-          className="title drop-shadow-2xl opacity-80"
+          className="title drop-shadow-2xl opacity-80 text-center"
           weight="black"
         >
           ECHIMINE
@@ -28,10 +28,10 @@ const Hero = () => {
             Editeur de films et séries sur Tiktok depuis 2022
           </Typographie>
           <div className="flex flex-col md:flex-row gap-4">
-            <CtaButton href="" bg="bg-jaune">
+            <CtaButton href="#decouvrir" bg="bg-jaune">
               Rejoindre la communauté
             </CtaButton>
-            <CtaButton href="" bg="border-1">
+            <CtaButton href="#universeeditfr" bg="border-1">
               Découvrir
             </CtaButton>
           </div>
