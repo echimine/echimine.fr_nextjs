@@ -70,5 +70,24 @@ body {
   mix-blend-mode: difference;
 }
 
-.gradient-universeeditfr {
+.gradient-universeeditfr-pattern {
+  background-image: url('/images/pattren/pattern-dots-2.svg');
+}
+
+.gradient-bg-universeedit {
+  background: linear-gradient(113deg, #000 0%, #000 55.44%, #fff 110.87%);
+}
+
+.glass-icon-jaune {
+  border: 1px solid rgba(252, 213, 9, 0.2);
+  background: rgba(252, 213, 9, 0.1);
+}
+
+.glass-bg-rect {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.glass-bg-rect2 {
+  background: rgba(0, 0, 0, 0.4);
 }

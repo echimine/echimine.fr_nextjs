@@ -2,6 +2,7 @@ import CardData from '@/components/commons/Cards/Datas/CardData';
 import { Typographie } from './components/Typographie';
 import CtaButton from '@/components/commons/CtaButton/CtaButton';
 import Image from 'next/image';
+import { Badge, BadgeCheck, Eye } from 'lucide-react';
 
 export default function App() {
   const data = [
@@ -96,30 +97,140 @@ export default function App() {
           ))}
         </div>
       </section>
-      <div className="bg-noir rounded-[64px]">
-        <section className="relative gradient-universeeditfr h-screen rounded-[64px]">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <defs>
-              <pattern
-                id="exportPattern"
-                x="0"
-                y="0"
-                width="10"
-                height="10"
-                patternUnits="userSpaceOnUse"
-              >
-                <rect width="10" height="10" fill="transparent" />
-                <circle
-                  cx="5"
-                  cy="5"
-                  r="1.6666666666666667"
-                  fill="#ffffff"
-                  opacity="0.2"
-                />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#exportPattern)" />
-          </svg>
+      <div className="gradient-bg-universeedit rounded-[64px]">
+        <section className="gradient-universeeditfr-pattern h-screen flex justify-center items-center gap-4 py-16 rounded-[64px]">
+          <div className="max-w-7xl h-full ">
+            <div className="w-full h-full flex gap-12">
+              <div className="flex flex-col items-start justify-between flex-1">
+                <div className="flex flex-col gap-2">
+                  <Typographie
+                    variant="h2"
+                    component="h2"
+                    weight="black"
+                    className="text-white"
+                  >
+                    UNIVERSEEDITFR
+                  </Typographie>
+                  <Typographie variant="sous-title" className="text-white">
+                    Rejoins notre serveur Discord dédié à l'éditing ! Partage
+                    tes créations, apprends de nouvelles techniques et
+                    connecte-toi avec d'autres créateurs passionnés.
+                  </Typographie>
+                </div>
+                <div>
+                  <ul className="flex flex-col gap-4">
+                    <li>
+                      <div className="flex justify-center items-center gap-4">
+                        <div className="glass-icon-jaune flex justify-center items-center rounded-2xl w-12 h-12">
+                          <Eye width={24} height={24} color="#FCD509" />
+                        </div>
+                        <div className="flex flex-col">
+                          <Typographie className="text-white">
+                            Discussion & Entraide
+                          </Typographie>
+                          <Typographie className="text-white">
+                            Échange avec la communauté
+                          </Typographie>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex justify-center items-center gap-4">
+                        <div className="glass-icon-jaune flex justify-center items-center rounded-2xl w-12 h-12">
+                          <Eye width={24} height={24} color="#FCD509" />
+                        </div>
+                        <div className="flex flex-col">
+                          <Typographie className="text-white">
+                            Discussion & Entraide
+                          </Typographie>
+                          <Typographie className="text-white">
+                            Échange avec la communauté
+                          </Typographie>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex justify-center items-center gap-4">
+                        <div className="glass-icon-jaune flex justify-center items-center rounded-2xl w-12 h-12">
+                          <Eye width={24} height={24} color="#FCD509" />
+                        </div>
+                        <div className="flex flex-col">
+                          <Typographie className="text-white">
+                            Discussion & Entraide
+                          </Typographie>
+                          <Typographie className="text-white">
+                            Échange avec la communauté
+                          </Typographie>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <CtaButton href="https://discord.gg/bHerfUqsj2" bg="bg-jaune">
+                  Rejoindre UNIVERSEEDITFR
+                </CtaButton>
+              </div>
+
+              <div className="w-full h-full glass-bg-rect text-white rounded-2xl px-8 py-6 flex flex-col gap-8 flex-1">
+                <div className=" flex items-center gap-4">
+                  <Image
+                    src={'/images/logo/universeeditfr.png'}
+                    width={72}
+                    height={72}
+                    alt=""
+                    className="rounded-[100px]"
+                  />
+                  <div className="glass-bg-rect2 rounded-2xl h-[87px] w-full flex gap-2 items-center justify-between px-6">
+                    <div>
+                      <Typographie>UNIVERSEEDITFR</Typographie>
+                      <Typographie>Serveur discord</Typographie>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                      <div className="bg-[#22C55E] rounded-full w-[12px] h-[12px]"></div>
+                      <Typographie>en ligne</Typographie>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl glass-bg-rect2 px-6 py-4.5 h-full flex-col flex gap-6">
+                  <div className="w-full h-[30vh] relative">
+                    <Image
+                      src={'/images/backround-UNIVERSEEDITFR-3.png'}
+                      fill
+                      alt=""
+                      className="object-cover rounded-[18px]"
+                    />
+                  </div>
+                  <ul className="flex flex-col gap-2">
+                    <li>
+                      <div className="flex gap-3 items-center">
+                        <BadgeCheck width={20} height={20} color="#FCD509" />
+                        <Typographie>
+                          Communauté active et bienveillante
+                        </Typographie>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex gap-3 items-center">
+                        <BadgeCheck width={20} height={20} color="#FCD509" />
+                        <Typographie>
+                          Communauté active et bienveillante
+                        </Typographie>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex gap-3 items-center">
+                        <BadgeCheck width={20} height={20} color="#FCD509" />
+                        <Typographie>
+                          Communauté active et bienveillante
+                        </Typographie>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
 
