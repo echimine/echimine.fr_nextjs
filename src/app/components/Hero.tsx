@@ -1,6 +1,5 @@
-import { ChevronDown } from 'lucide-react';
+
 import { Typographie } from './Typographie';
-import Image from 'next/image';
 import CtaButton from '@/components/commons/CtaButton/CtaButton';
 
 const Hero = () => {

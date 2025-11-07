@@ -2,7 +2,7 @@ import CardData from '@/components/commons/Cards/Datas/CardData';
 import { Typographie } from './components/Typographie';
 import CtaButton from '@/components/commons/CtaButton/CtaButton';
 import Image from 'next/image';
-import { Badge, BadgeCheck, Eye } from 'lucide-react';
+import { BadgeCheck, Eye } from 'lucide-react';
 
 export default function App() {
   const data = [
@@ -112,9 +112,9 @@ export default function App() {
                     UNIVERSEEDITFR
                   </Typographie>
                   <Typographie variant="sous-title" className="text-white">
-                    Rejoins notre serveur Discord dédié à l'éditing ! Partage
+                    {`Rejoins notre serveur Discord dédié à l'éditing ! Partage
                     tes créations, apprends de nouvelles techniques et
-                    connecte-toi avec d'autres créateurs passionnés.
+                    connecte-toi avec d'autres créateurs passionnés.`}
                   </Typographie>
                 </div>
                 <div>

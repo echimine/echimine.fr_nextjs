@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { Divide } from 'lucide-react';
 import { Typographie } from '@/app/components/Typographie';
 
 export interface DataItem {
