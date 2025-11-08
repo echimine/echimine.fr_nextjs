@@ -12,7 +12,7 @@ type CtaButtonProps = {
 
 const CtaButton = ({
   href,
-  target = '_blank',
+  target,
   bg,
   icon,
   children,

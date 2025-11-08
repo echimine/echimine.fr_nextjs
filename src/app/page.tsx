@@ -2,7 +2,7 @@ import CardData from '@/components/commons/Cards/Datas/CardData';
 import { Typographie } from './components/Typographie';
 import CtaButton from '@/components/commons/CtaButton/CtaButton';
 import Image from 'next/image';
-import { BadgeCheck, Eye } from 'lucide-react';
+import { BadgeCheck, Eye, MessageCircle, Sparkles, Trophy } from 'lucide-react';
 
 export default function App() {
   const data = [
@@ -36,7 +36,7 @@ export default function App() {
     <main>
       <section className="w-full h-screen overflow-hidden flex justify-center">
         <div className="absolute inset-0">
-          <div className="w-full h-dvh gradient-bg"></div>
+          <div className="w-full h-full gradient-bg"></div>
         </div>
         <div className="relative max-w-7xl flex flex-col items-center justify-center gap-6 px-4">
           <Typographie
@@ -66,7 +66,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="h-full sm:h-screen mx-auto flex flex-col w-full max-w-7xl gap-40">
+      <section className="h-full mx-auto flex flex-col w-full max-w-7xl gap-40 pb-30">
         <div className="flex flex-col gap-2 ">
           <Typographie
             variant="h2"
@@ -97,142 +97,160 @@ export default function App() {
           ))}
         </div>
       </section>
-      <div className="gradient-bg-universeedit rounded-[64px]">
-        <section className="gradient-universeeditfr-pattern h-screen flex justify-center items-center gap-4 py-16 rounded-[64px]">
-          <div className="max-w-7xl h-full ">
-            <div className="w-full h-full flex gap-12">
-              <div className="flex flex-col items-start justify-between flex-1">
-                <div className="flex flex-col gap-2">
-                  <Typographie
-                    variant="h2"
-                    component="h2"
-                    weight="black"
-                    className="text-white"
-                  >
-                    UNIVERSEEDITFR
-                  </Typographie>
-                  <Typographie variant="sous-title" className="text-white">
-                    {`Rejoins notre serveur Discord dédié à l'éditing ! Partage
+      <section className="py-30">
+        <div className="gradient-bg-universeedit rounded-[64px]">
+          <div className="gradient-universeeditfr-pattern h-screen flex justify-center items-center gap-4 py-16 rounded-[64px]">
+            <div className="max-w-7xl h-full ">
+              <div className="w-full h-full flex gap-12">
+                <div className="flex flex-col items-start justify-between flex-1">
+                  <div className="flex flex-col gap-2">
+                    <Typographie
+                      variant="h2"
+                      component="h2"
+                      weight="black"
+                      className="text-white"
+                    >
+                      UNIVERSEEDITFR
+                    </Typographie>
+                    <Typographie
+                      variant="sous-title"
+                      className="text-white opacity-70"
+                    >
+                      {`Rejoins notre serveur Discord dédié à l'éditing ! Partage
                     tes créations, apprends de nouvelles techniques et
                     connecte-toi avec d'autres créateurs passionnés.`}
-                  </Typographie>
-                </div>
-                <div>
-                  <ul className="flex flex-col gap-4">
-                    <li>
-                      <div className="flex justify-center items-center gap-4">
-                        <div className="glass-icon-jaune flex justify-center items-center rounded-2xl w-12 h-12">
-                          <Eye width={24} height={24} color="#FCD509" />
-                        </div>
-                        <div className="flex flex-col">
-                          <Typographie className="text-white">
-                            Discussion & Entraide
-                          </Typographie>
-                          <Typographie className="text-white">
-                            Échange avec la communauté
-                          </Typographie>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="flex justify-center items-center gap-4">
-                        <div className="glass-icon-jaune flex justify-center items-center rounded-2xl w-12 h-12">
-                          <Eye width={24} height={24} color="#FCD509" />
-                        </div>
-                        <div className="flex flex-col">
-                          <Typographie className="text-white">
-                            Discussion & Entraide
-                          </Typographie>
-                          <Typographie className="text-white">
-                            Échange avec la communauté
-                          </Typographie>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="flex justify-center items-center gap-4">
-                        <div className="glass-icon-jaune flex justify-center items-center rounded-2xl w-12 h-12">
-                          <Eye width={24} height={24} color="#FCD509" />
-                        </div>
-                        <div className="flex flex-col">
-                          <Typographie className="text-white">
-                            Discussion & Entraide
-                          </Typographie>
-                          <Typographie className="text-white">
-                            Échange avec la communauté
-                          </Typographie>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <CtaButton href="https://discord.gg/bHerfUqsj2" bg="bg-jaune">
-                  Rejoindre UNIVERSEEDITFR
-                </CtaButton>
-              </div>
-
-              <div className="w-full h-full glass-bg-rect text-white rounded-2xl px-8 py-6 flex flex-col gap-8 flex-1">
-                <div className=" flex items-center gap-4">
-                  <Image
-                    src={'/images/logo/universeeditfr.png'}
-                    width={72}
-                    height={72}
-                    alt=""
-                    className="rounded-[100px]"
-                  />
-                  <div className="glass-bg-rect2 rounded-2xl h-[87px] w-full flex gap-2 items-center justify-between px-6">
-                    <div>
-                      <Typographie>UNIVERSEEDITFR</Typographie>
-                      <Typographie>Serveur discord</Typographie>
-                    </div>
-                    <div className="flex gap-2 items-center">
-                      <div className="bg-[#22C55E] rounded-full w-[12px] h-[12px]"></div>
-                      <Typographie>en ligne</Typographie>
-                    </div>
+                    </Typographie>
                   </div>
+                  <div>
+                    <ul className="flex flex-col items-start gap-4">
+                      <li>
+                        <div className="flex justify-center items-center gap-4">
+                          <div className="glass-icon-jaune flex justify-center items-center rounded-2xl w-12 h-12">
+                            <MessageCircle
+                              width={24}
+                              height={24}
+                              color="#FCD509"
+                            />
+                          </div>
+                          <div className="flex flex-col">
+                            <Typographie className="text-white">
+                              Discussion & Entraide
+                            </Typographie>
+                            <Typographie className="text-white opacity-60">
+                              Échange avec la communauté
+                            </Typographie>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="flex justify-center items-center gap-4">
+                          <div className="glass-icon-jaune flex justify-center items-center rounded-2xl w-12 h-12">
+                            <Sparkles width={24} height={24} color="#FCD509" />
+                          </div>
+                          <div className="flex flex-col">
+                            <Typographie className="text-white">
+                              Tutoriels & Ressources
+                            </Typographie>
+                            <Typographie className="text-white opacity-60">
+                              Améliore tes compétences
+                            </Typographie>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="flex justify-center items-center gap-4">
+                          <div className="glass-icon-jaune flex justify-center items-center rounded-2xl w-12 h-12">
+                            <Trophy width={24} height={24} color="#FCD509" />
+                          </div>
+                          <div className="flex flex-col">
+                            <Typographie className="text-white">
+                              Concours & Événements
+                            </Typographie>
+                            <Typographie className="text-white opacity-60">
+                              Participe et gagne des récompenses
+                            </Typographie>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <CtaButton
+                    href="https://discord.gg/bHerfUqsj2"
+                    bg="bg-jaune"
+                    target="_blank"
+                  >
+                    Rejoindre UNIVERSEEDITFR
+                  </CtaButton>
                 </div>
 
-                <div className="rounded-2xl glass-bg-rect2 px-6 py-4.5 h-full flex-col flex gap-6">
-                  <div className="w-full h-[30vh] relative">
+                <div className="w-full h-full glass-bg-rect text-white rounded-2xl px-8 py-6 flex flex-col gap-8 flex-1">
+                  <div className=" flex items-center gap-4">
                     <Image
-                      src={'/images/backround-UNIVERSEEDITFR-3.png'}
-                      fill
+                      src={'/images/logo/universeeditfr.png'}
+                      width={72}
+                      height={72}
                       alt=""
-                      className="object-cover rounded-[18px]"
+                      className="rounded-[100px]"
                     />
+                    <div className="glass-bg-rect2 rounded-2xl h-[87px] w-full flex gap-2 items-center justify-between px-6">
+                      <div>
+                        <Typographie>UNIVERSEEDITFR</Typographie>
+                        <Typographie className="opacity-60">
+                          Serveur discord
+                        </Typographie>
+                      </div>
+                      <div className="flex gap-2 items-center">
+                        <div className="bg-[#22C55E] rounded-full w-[12px] h-[12px]"></div>
+                        <Typographie>en ligne</Typographie>
+                      </div>
+                    </div>
                   </div>
-                  <ul className="flex flex-col gap-2">
-                    <li>
-                      <div className="flex gap-3 items-center">
-                        <BadgeCheck width={20} height={20} color="#FCD509" />
-                        <Typographie>
-                          Communauté active et bienveillante
-                        </Typographie>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="flex gap-3 items-center">
-                        <BadgeCheck width={20} height={20} color="#FCD509" />
-                        <Typographie>
-                          Communauté active et bienveillante
-                        </Typographie>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="flex gap-3 items-center">
-                        <BadgeCheck width={20} height={20} color="#FCD509" />
-                        <Typographie>
-                          Communauté active et bienveillante
-                        </Typographie>
-                      </div>
-                    </li>
-                  </ul>
+
+                  <div className="rounded-2xl glass-bg-rect2 px-6 py-4.5 h-full flex-col flex gap-6">
+                    <div className="w-full h-[30vh] relative">
+                      <Image
+                        src={'/images/backround-UNIVERSEEDITFR-3.png'}
+                        fill
+                        alt=""
+                        className="object-cover rounded-[18px]"
+                      />
+                    </div>
+                    <ul className="flex flex-col gap-2">
+                      <li>
+                        <div className="flex gap-3 items-center">
+                          <BadgeCheck width={20} height={20} color="#FCD509" />
+                          <Typographie>
+                            Communauté active et bienveillante
+                          </Typographie>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="flex gap-3 items-center">
+                          <BadgeCheck width={20} height={20} color="#FCD509" />
+                          <Typographie>
+                            Support et conseils personnalisés
+                          </Typographie>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="flex gap-3 items-center">
+                          <BadgeCheck width={20} height={20} color="#FCD509" />
+                          <Typographie>
+                            Actualités et nouveautés en exclusivité
+                          </Typographie>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section className="max-w-7xl mx-auto">
+        <div></div>
+      </section>
 
       {/* <section className="bg-jaune rounded-2xl">
         <AboutMe />
