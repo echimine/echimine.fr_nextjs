@@ -85,7 +85,7 @@ export default function App() {
             Une communauté en constante évolution
           </Typographie>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:p-4 gap-8 justify-items-center pb-30 md:pb-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:p-4 gap-8 justify-items-center pb-30 md:pb-0 px-6">
           {data.map((data, index) => (
             <CardData
               key={index}
@@ -262,26 +262,37 @@ export default function App() {
           >
             MES MEILLEURES EDITS
           </Typographie>
-          <Typographie variant="sub-title" component="h4">
+          <Typographie
+            variant="sub-title"
+            component="h4"
+            className="text-center"
+          >
             Mes créations que je pourrais regarder en boucle
           </Typographie>
         </div>
-        <Link
-          href="/mes-creations"
-          className="bg-jaune w-full rounded-2xl h-[40vh] flex flex-col justify-center items-center gap-4"
-        >
-          <div className="flex flex-col items-center gap-2">
-            <Typographie variant="h3" component="h3" weight="bold">
-              Envie de découvrir encore plus d’édits ?
-            </Typographie>
-            <Typographie className="opacity-60">
-              Trier par catégories, date, likes, vues et bien plus encore...
-            </Typographie>
-          </div>
-          <div className="bg-white flex justify-center items-center w-[196px] h-[56px] rounded-[30px] border-1">
-            <Typographie>Voir mes créations</Typographie>
-          </div>
-        </Link>
+        <div className="md:px-0 md:py-0 px-6 w-full">
+          <Link
+            href="/mes-creations"
+            className="bg-jaune w-full rounded-2xl h-[40vh] flex flex-col justify-center items-center gap-4"
+          >
+            <div className="flex flex-col items-center gap-2 px-4 md:px-0">
+              <Typographie
+                variant="h3"
+                component="h3"
+                weight="bold"
+                className="text-center"
+              >
+                Envie de découvrir encore plus d’édits ?
+              </Typographie>
+              <Typographie className="opacity-60 text-center">
+                Trier par catégories, date, likes, vues et bien plus encore...
+              </Typographie>
+            </div>
+            <div className="bg-white flex justify-center items-center w-[196px] h-[56px] rounded-[30px] border-1">
+              <Typographie>Voir mes créations</Typographie>
+            </div>
+          </Link>
+        </div>
 
         <div className="grid md:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-6">
           <Image
