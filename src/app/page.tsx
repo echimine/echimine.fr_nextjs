@@ -2,7 +2,7 @@ import CardData from '@/components/commons/Cards/Datas/CardData';
 import { Typographie } from './components/Typographie';
 import CtaButton from '@/components/commons/CtaButton/CtaButton';
 import Image from 'next/image';
-import { BadgeCheck, Eye, MessageCircle, Sparkles, Trophy } from 'lucide-react';
+import { BadgeCheck, MessageCircle, Sparkles, Trophy } from 'lucide-react';
 import Link from 'next/link';
 
 export default function App() {
@@ -66,7 +66,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="h-full mx-auto flex flex-col w-full max-w-7xl gap-40 pb-30">
+      <section className="h-full mx-auto flex flex-col w-full max-w-7xl gap-16 pb-30">
         <div className="flex flex-col gap-2 ">
           <Typographie
             variant="h1"
@@ -116,7 +116,7 @@ export default function App() {
                     <Typographie
                       variant="sub-title"
                       component="p"
-                      className="text-white opacity-70 text-center"
+                      className="text-white opacity-70 text-center md:text-start"
                     >
                       {`Rejoins notre serveur Discord dédié à l'éditing ! Partage
                     tes créations, apprends de nouvelles techniques et
@@ -254,7 +254,12 @@ export default function App() {
       </section>
       <section className="max-w-7xl mx-auto flex flex-col justify-center items-center gap-30 py-20">
         <div className="flex justify-center items-center flex-col gap-2">
-          <Typographie variant="h1" component="h1" weight="black">
+          <Typographie
+            variant="h1"
+            component="h1"
+            weight="black"
+            className="text-center"
+          >
             MES MEILLEURES EDITS
           </Typographie>
           <Typographie variant="sub-title" component="h4">
@@ -277,6 +282,51 @@ export default function App() {
             <Typographie>Voir mes créations</Typographie>
           </div>
         </Link>
+
+        <div className="grid md:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-6">
+          <Image
+            src={'/images/cards-img/vignette_edit_ryzler_1x1.jpg'}
+            width={450}
+            height={450}
+            alt=""
+            className="rounded-2xl"
+          />
+          <Image
+            src={'/images/cards-img/vignette_edit_ryzler_1x1.jpg'}
+            width={450}
+            height={450}
+            alt=""
+            className="rounded-2xl"
+          />
+          <Image
+            src={'/images/cards-img/vignette_edit_ryzler_1x1.jpg'}
+            width={450}
+            height={450}
+            alt=""
+            className="rounded-2xl"
+          />
+          <Image
+            src={'/images/cards-img/vignette_edit_ryzler_1x1.jpg'}
+            width={450}
+            height={450}
+            alt=""
+            className="rounded-2xl"
+          />
+          <Image
+            src={'/images/cards-img/vignette_edit_ryzler_1x1.jpg'}
+            width={450}
+            height={450}
+            alt=""
+            className="rounded-2xl"
+          />
+          <Image
+            src={'/images/cards-img/vignette_edit_ryzler_1x1.jpg'}
+            width={450}
+            height={450}
+            alt=""
+            className="rounded-2xl"
+          />
+        </div>
       </section>
     </main>
   );
