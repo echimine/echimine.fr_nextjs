@@ -18,12 +18,11 @@ const Header = () => {
             isOpen ? 'rounded-t-[30px]' : 'rounded-[50px]'
           }`}
         >
-          <Link href="/">
+          <Link href="/" className="w-[32px] h-[32px]">
             <Image
               src={'/images/logo/logo-universeeditfr.png'}
               width={32}
               height={32}
-              sizes="100vw"
               alt="logo de echimine"
               className="rounded-4xl"
             />

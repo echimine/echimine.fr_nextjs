@@ -3,6 +3,7 @@ import { Typographie } from './components/Typographie';
 import CtaButton from '@/components/commons/CtaButton/CtaButton';
 import Image from 'next/image';
 import { BadgeCheck, Eye, MessageCircle, Sparkles, Trophy } from 'lucide-react';
+import Link from 'next/link';
 
 export default function App() {
   const data = [
@@ -50,8 +51,7 @@ export default function App() {
             <Typographie
               variant="h4"
               component="h2"
-              fontChoice="font-excon"
-              className="font-archivo text-center drop-shadow-lg max-w-2xl"
+              className="text-center drop-shadow-lg max-w-2xl"
             >
               Editeur de films et séries sur Tiktok depuis 2022
             </Typographie>
@@ -69,18 +69,18 @@ export default function App() {
       <section className="h-full mx-auto flex flex-col w-full max-w-7xl gap-40 pb-30">
         <div className="flex flex-col gap-2 ">
           <Typographie
-            variant="h2"
-            component="h2"
+            variant="h1"
+            component="h1"
             weight="black"
             className="text-center"
           >
             MES CHIFFRES
           </Typographie>
           <Typographie
-            variant="sous-title"
+            variant="sub-title"
             component="p"
             weight="medium"
-            className="text-center text-noir/60"
+            className="text-center text-noir/60 "
           >
             Une communauté en constante évolution
           </Typographie>
@@ -97,24 +97,26 @@ export default function App() {
           ))}
         </div>
       </section>
-      <section className="py-30">
-        <div className="gradient-bg-universeedit rounded-[64px]">
-          <div className="gradient-universeeditfr-pattern h-screen flex justify-center items-center gap-4 py-16 rounded-[64px]">
-            <div className="max-w-7xl h-full ">
-              <div className="w-full h-full flex gap-12">
-                <div className="flex flex-col items-start justify-between flex-1">
-                  <div className="flex flex-col gap-2">
+      <section className="md:py-30">
+        <div className="gradient-bg-universeedit rounded-4xl md:rounded-[64px]">
+          <div className="gradient-universeeditfr-pattern py-6 md:py-20 px-4 md:px-8 rounded-4xl md:rounded-[64px]">
+            <div className="max-w-7xl h-full mx-auto">
+              <div className="w-full h-full flex flex-col lg:flex-row gap-12 ">
+                {/* GAUCHE */}
+                <div className="flex flex-col items-center md:items-start justify-between flex-1 gap-12">
+                  <div className="flex flex-col w-full gap-4">
                     <Typographie
-                      variant="h2"
-                      component="h2"
+                      variant="h1"
+                      component="h1"
                       weight="black"
-                      className="text-white"
+                      className="text-white text-center"
                     >
-                      UNIVERSEEDITFR
+                      UNIVERSEEDIT
                     </Typographie>
                     <Typographie
-                      variant="sous-title"
-                      className="text-white opacity-70"
+                      variant="sub-title"
+                      component="p"
+                      className="text-white opacity-70 text-center"
                     >
                       {`Rejoins notre serveur Discord dédié à l'éditing ! Partage
                     tes créations, apprends de nouvelles techniques et
@@ -122,7 +124,7 @@ export default function App() {
                     </Typographie>
                   </div>
                   <div>
-                    <ul className="flex flex-col items-start gap-4">
+                    <ul className="flex flex-col items-start  gap-4">
                       <li>
                         <div className="flex justify-center items-center gap-4">
                           <div className="glass-icon-jaune flex justify-center items-center rounded-2xl w-12 h-12">
@@ -182,16 +184,18 @@ export default function App() {
                     Rejoindre UNIVERSEEDITFR
                   </CtaButton>
                 </div>
-
+                {/* DROITE */}
                 <div className="w-full h-full glass-bg-rect text-white rounded-2xl px-8 py-6 flex flex-col gap-8 flex-1">
-                  <div className=" flex items-center gap-4">
+                  <div className=" flex items-center w-full gap-4">
                     <Image
-                      src={'/images/logo/universeeditfr.png'}
-                      width={72}
-                      height={72}
-                      alt=""
-                      className="rounded-[100px]"
+                      src="/images/logo/universeeditfr.png"
+                      alt="Logo"
+                      width={0}
+                      height={0}
+                      sizes="(min-width: 768px) 72px, 48px"
+                      className="rounded-full w-12 h-12 md:w-[72px] md:h-[72px]"
                     />
+
                     <div className="glass-bg-rect2 rounded-2xl h-[87px] w-full flex gap-2 items-center justify-between px-6">
                       <div>
                         <Typographie>UNIVERSEEDITFR</Typographie>
@@ -199,7 +203,7 @@ export default function App() {
                           Serveur discord
                         </Typographie>
                       </div>
-                      <div className="flex gap-2 items-center">
+                      <div className="md:flex gap-2 items-center hidden ">
                         <div className="bg-[#22C55E] rounded-full w-[12px] h-[12px]"></div>
                         <Typographie>en ligne</Typographie>
                       </div>
@@ -248,57 +252,32 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="max-w-7xl mx-auto">
-        <div></div>
-      </section>
-
-      {/* <section className="bg-jaune rounded-2xl">
-        <AboutMe />
-      </section> */}
-
-      {/* <DataEchimine /> */}
-      {/*       <div className="md:pt-20">
-        <MotionTypographie
-          variant="h1"
-          weight="bold"
-          component="h2"
-          className="px-6 py-6"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          Echimine, c’est aussi une communauté : UniverseEditFR
-        </MotionTypographie>
-      </div>
-      <section>
-        <div className="flex flex-wrap gap-4 md:flex-nowrap items-center justify-center">
-          <img
-            src="/images/logo/logo-universeeditfr.png"
-            alt=""
-            className="w-[72px]"
-          />
-          <Typographie variant="h1" component="h1">
-            X
+      <section className="max-w-7xl mx-auto flex flex-col justify-center items-center gap-30 py-20">
+        <div className="flex justify-center items-center flex-col gap-2">
+          <Typographie variant="h1" component="h1" weight="black">
+            MES MEILLEURES EDITS
           </Typographie>
-          <img
-            src="/images/logo/logo-discord.png"
-            alt=""
-            className="w-[72px] pr-2"
-          />
+          <Typographie variant="sub-title" component="h4">
+            Mes créations que je pourrais regarder en boucle
+          </Typographie>
         </div>
-      </section> */}
-      {/* <GridNormal /> */}
-      {/* <section>
-        <Typographie>Serveur Discord UniverseEditFR</Typographie>
-        <img src="/images/backround-UNIVERSEEDITFR-3.png" alt="" />
-        <Typographie>
-          UniverseEditFR est un serveur qui réunit ma communauté mais aussi des
-          editeurs que ça soit des débutants ou des expérimenter. Le but c'est
-          d'éxpérimenter, discuter, promomouvoir ses vidéos et faire en sorte
-          que vous aussi vous puissiez percer la-dedans.
-        </Typographie>
-      </section> */}
+        <Link
+          href="/mes-creations"
+          className="bg-jaune w-full rounded-2xl h-[40vh] flex flex-col justify-center items-center gap-4"
+        >
+          <div className="flex flex-col items-center gap-2">
+            <Typographie variant="h3" component="h3" weight="bold">
+              Envie de découvrir encore plus d’édits ?
+            </Typographie>
+            <Typographie className="opacity-60">
+              Trier par catégories, date, likes, vues et bien plus encore...
+            </Typographie>
+          </div>
+          <div className="bg-white flex justify-center items-center w-[196px] h-[56px] rounded-[30px] border-1">
+            <Typographie>Voir mes créations</Typographie>
+          </div>
+        </Link>
+      </section>
     </main>
   );
 }

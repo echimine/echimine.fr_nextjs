@@ -15,7 +15,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
     | 'link'
     | 'body-base'
     | 'body-lg'
-    | 'sous-title'
+    | 'sub-title'
     | 'date'
     | 'total';
   component?:
@@ -41,11 +41,11 @@ export const Typographie = forwardRef<HTMLElement, Props>(
   (
     {
       variant = 'body-base',
-      component: Component = 'div',
+      component: Component = 'p',
       weight = 'regular',
       theme = 'primary',
       fontChoice = 'font-archivo',
-      className,
+      className = 'break-words whitespace-normal',
       href,
       children,
       ...rest
@@ -88,16 +88,16 @@ export const Typographie = forwardRef<HTMLElement, Props>(
 
     switch (variant) {
       case 'h1':
-        variantStyles = 'text-6xl';
+        variantStyles = 'md:text-7xl text-5xl';
         break;
       case 'h2':
-        variantStyles = 'text-7xl';
+        variantStyles = 'md:text-7xl text-4xl';
         break;
-      case 'sous-title':
-        variantStyles = 'text-xl';
       case 'h3':
-        variantStyles = 'text-2xl';
+        variantStyles = 'md:text-4xl text-xl';
         break;
+      case 'sub-title':
+        variantStyles = 'text-xl';
       case 'h4':
         variantStyles = 'text-xl';
         break;
@@ -110,6 +110,7 @@ export const Typographie = forwardRef<HTMLElement, Props>(
       case 'link':
         variantStyles = 'text-link';
         break;
+
       case 'body-base':
         variantStyles = 'text-base';
         break;
