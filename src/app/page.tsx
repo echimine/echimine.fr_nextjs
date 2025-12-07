@@ -1,9 +1,6 @@
 import CardData from '@/components/commons/Cards/Datas/CardData';
 import { Typographie } from './components/Typographie';
 import CtaButton from '@/components/commons/CtaButton/CtaButton';
-import Image from 'next/image';
-import { BadgeCheck, MessageCircle, Sparkles, Trophy } from 'lucide-react';
-import Link from 'next/link';
 import { Univereeditfr } from '@/components/commons/Pages/Univereeditfr/Univereeditfr';
 import TopEdits from '@/components/commons/Pages/TopEdits/TopEdits';
 
