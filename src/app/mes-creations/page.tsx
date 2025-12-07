@@ -1,69 +1,46 @@
 'use client';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import type { CategoriesApiResponse } from '../types/categories';
+
+
+import {Typographie} from "@/app/components/Typographie";
+import GridTopEdits from "@/components/commons/Pages/TopEdits/components/GridTopEdits";
 
 export default function Home() {
-  const [data, setData] = useState<CategoriesApiResponse | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+    return (
+        <>
+            <main className="">
+                <section className="relative w-full h-screen overflow-hidden flex justify-center">
+                    <div className="absolute inset-0">
+                        <div className="w-full h-full gradient-bg"></div>
+                    </div>
+                    <div
+                        className="relative max-w-7xl mx-auto w-full flex flex-col items-center justify-center gap-6 px-4">
+                        <Typographie
+                            component="h1"
+                            className="title drop-shadow-2xl opacity-80"
+                            weight="black"
+                        >MES CRÉATIONS
+                        </Typographie>
+                    </div>
+                </section>
 
-  const API_URL = 'http://localhost:3001';
+                <div className="max-w-7xl w-full mx-auto ">
+                    {/*entre il y aura un truc du genre inst ytb tiktok et discord*/}
+                    <div className="flex justify-center items-center gap-4 py-20">
+                        <div className="w-12 h-12 bg-black">
 
-  useEffect(() => {
-    fetch(`${API_URL}/api/v1/categories`)
-      .then((res) => {
-        if (!res.ok) throw new Error(`HTTP error ${res.status}`);
-        return res.json();
-      })
-      .then((json: CategoriesApiResponse) => setData(json))
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false));
-  }, []);
+                        </div>
+                        <div className="w-12 h-12 bg-red-600">
 
-  if (loading) return <p>Chargement...</p>;
-  if (error) return <p>Erreur : {error}</p>;
-  if (!data || data.data.length === 0)
-    return <p>{'Aucune catégorie trouvée.'}</p>;
-  console.log(data);
-  return (
-    <>
-      <h1>Catégories :</h1>
-      {data.data.map((category) => (
-        <div key={category.id}>
-          <h2>{category.name}</h2>
-          <p>{category.description}</p>
+                        </div>
+                        <div className="w-12 h-12 bg-blue-600">
 
-          {/* Image catégorie si disponible */}
-          {category.pathImg && category.pathImg.trim() !== '' ? (
-            <Image
-              src={category.pathImg}
-              alt={category.name}
-              width={200}
-              height={200}
-            />
-          ) : (
-            <p>{`pas d'image`}</p>
-          )}
-
-          <ul>
-            {category.articles.map((article) => (
-              <li key={article.id}>
-                {article.name} ({article.nbrLikes} likes)
-                {article.pathImg && (
-                  <Image
-                    src={`${API_URL}${article.pathImg}`}
-                    alt=""
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                  />
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </>
-  );
+                        </div>
+                    </div>
+                </div>
+                <div className="max-w-7xl w-full mx-auto ">
+                    <GridTopEdits/>
+                </div>
+            </main>
+        </>
+    );
 }

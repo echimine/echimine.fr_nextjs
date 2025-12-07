@@ -91,3 +91,7 @@ body {
 .glass-bg-rect2 {
   background: rgba(0, 0, 0, 0.4);
 }
+
+.title-detail-edit{
+    mix-blend-mode: difference;
+}
