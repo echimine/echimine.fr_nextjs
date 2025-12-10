@@ -12,9 +12,8 @@ export default function MesCreationsDetails() {
                         alt=""
                         fill
                         sizes="100vw"
-                        className="object-cover object-center grayscale hover:filter-none duration-300 ease-in-out"
+                        className="object-cover object-center duration-300 ease-in-out brightness-50"
                     />
-
                     <Typographie
                         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[80] text-white text-center title-detail-edit"
                         variant="h1"
@@ -39,14 +38,8 @@ export default function MesCreationsDetails() {
                     </div>
                     <video controls className="w-full">
                         <source src="/video/edit_tron_16X9_fini.mp4" type="video/webm"/>
-
-
-                        Télécharger la vidéo
-                        <a href="/shared-assets/videos/flower.webm">WEBM</a>
-                        ou
-                        <a href="/shared-assets/videos/flower.mp4">MP4</a>
-                        .
                     </video>
+                    {/* afiicher en bas les edits de la catégorie en slider horizontal*/}
                 </div>
             </main>
 

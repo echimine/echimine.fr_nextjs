@@ -94,4 +94,5 @@ body {
 
 .title-detail-edit{
     mix-blend-mode: difference;
+    font-size: clamp(3rem, 15vw, 17rem);
 }
