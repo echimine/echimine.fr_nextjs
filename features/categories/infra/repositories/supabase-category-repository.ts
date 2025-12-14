@@ -31,11 +31,36 @@ export class SupabaseCategoryRepository implements CategoryRepository {
     }
 
     async update(category: UpdateCategoryDto): Promise<boolean> {
-        return Promise.resolve(false);
+        const client = await this.getAdminClient()
+        const query = client
+            .from('categories').delete()
+        const {error} = await query;
+
+        if (error)
+            throw new Error(`error when getting into database: ${error.message}`);
+
+        return true;
     }
 
     async delete(categoryId: string): Promise<boolean> {
-        return Promise.resolve(false);
+        const clientSupabase = await this.getAdminClient();
+        const {data: project, error: fetchError} = await clientSupabase
+            .from('categories')
+            .select('id')
+            .eq('id', categoryId)
+            .single();
+
+        if (fetchError) throw fetchError;
+        if (!project) throw new Error(`Project with id=${categoryId} not found`);
+
+        const {error: deleteError} = await clientSupabase
+            .from('categories')
+            .delete()
+            .eq('id', categoryId);
+
+        if (deleteError) throw deleteError;
+
+        return true;
     }
 
     getAdminClient() {
