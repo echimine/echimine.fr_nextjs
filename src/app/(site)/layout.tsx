@@ -1,6 +1,7 @@
 import Footer from '@/app/components/Footer/Footer';
 import Header from '@/components/commons/navigations/Header/Header';
 import '../globals.css';
+import '../custom-shadcn.css';
 export default function SiteLayout({
   children,
 }: Readonly<{

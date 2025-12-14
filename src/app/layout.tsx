@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import './custom-shadcn.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

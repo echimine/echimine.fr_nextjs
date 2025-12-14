@@ -31,14 +31,8 @@ body {
   mix-blend-mode: screen;
 }
 
-.masonry-column {
-  background-clip: padding-box;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
 
-:root {
+/* :root {
   --font-archivo: 'Archivo', sans-serif;
   --font-excon: 'Excon', sans-serif;
   --font-sentient: 'Sentient', serif;
@@ -52,9 +46,9 @@ body {
   --sidebar-accent-foreground: hsl(240 5.9% 10%);
   --sidebar-border: hsl(220 13% 91%);
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
-}
+} */
 
-@theme inline {
+/* @theme inline {
   --font-archivo: var(--font-archivo);
   --font-excon: var(--font-excon);
   --font-sentient: var(--font-sentient);
@@ -69,7 +63,7 @@ body {
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
-}
+} */
 
 .gradient-bg {
   background: linear-gradient(
@@ -116,7 +110,7 @@ body {
     font-size: clamp(3rem, 15vw, 17rem);
 }
 
-.dark {
+/* .dark {
   --sidebar: hsl(240 5.9% 10%);
   --sidebar-foreground: hsl(240 4.8% 95.9%);
   --sidebar-primary: hsl(224.3 76.3% 48%);
@@ -125,13 +119,13 @@ body {
   --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
   --sidebar-border: hsl(240 3.7% 15.9%);
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
-}
+} */
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
